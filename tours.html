@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Туры — YŪGEN</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tours.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="logo">YŪGEN ✿</div>
+
+  <nav class="nav">
+    <a href="index.html">Главная</a>
+    <a href="tours.html">Направления</a>
+    <a href="index.html#about">О нас</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+
+  <a href="contacts.html" class="header-btn">Планируйте путешествие →</a>
+</header>
+
+<section class="tours-hero">
+  <div class="hero-glass">
+    <span class="eyebrow">НАПРАВЛЕНИЯ ✿</span>
+    <h1>Выберите путешествие по настроению</h1>
+    <p>
+      Не просто туры, а атмосферные маршруты по Азии — от неонового Токио
+      до спокойных храмов Киото и тёплых вечеров Бангкока.
+    </p>
+  </div>
+</section>
+
+<section class="tours-section">
+  <div class="section-top">
+    <span>✿ КАТАЛОГ ТУРОВ ✿</span>
+    <h2>Маршруты YŪGEN</h2>
+  </div>
+
+  <div class="filters">
+    <button onclick="filter('all')">Все</button>
+    <button onclick="filter('japan')">Япония</button>
+    <button onclick="filter('korea')">Корея</button>
+    <button onclick="filter('thai')">Таиланд</button>
+    <button onclick="filter('bali')">Бали</button>
+  </div>
+
+  <div class="tours-grid">
+
+  <article class="tour-card japan" onclick="openModal('Tokyo Neon')">
+    <span>Япония • 7 дней</span>
+    <h3>Tokyo Neon</h3>
+    <p>Неоновый Токио, городские кварталы, кафе, вечерние прогулки и современная Япония.</p>
+    <ul>
+      <li>Сибуя и Синдзюку</li>
+      <li>Уличная гастрономия</li>
+      <li>Вид на Фудзи</li>
+    </ul>
+    <button>Подробнее</button>
+  </article>
+
+  <article class="tour-card japan" onclick="openModal('Kyoto Calm')">
+    <span>Япония • 5 дней</span>
+    <h3>Kyoto Calm</h3>
+    <p>Спокойный маршрут по храмам, садам, чайным традициям и старой Японии.</p>
+    <ul>
+      <li>Храмы Киото</li>
+      <li>Чайная церемония</li>
+      <li>Сады и улочки</li>
+    </ul>
+    <button>Подробнее</button>
+  </article>
+
+  <article class="tour-card korea" onclick="openModal('Seoul Night')">
+    <span>Корея • 6 дней</span>
+    <h3>Seoul Night</h3>
+    <p>Городской маршрут по Сеулу: дворцы, k-culture, кафе, рынки и ночная атмосфера.</p>
+    <ul>
+      <li>Дворцы Чосон</li>
+      <li>Кафе и районы</li>
+      <li>Ночные рынки</li>
+    </ul>
+    <button>Подробнее</button>
+  </article>
+
+  <article class="tour-card thai" onclick="openModal('Bangkok Heat')">
+    <span>Таиланд • 7 дней</span>
+    <h3>Bangkok Heat</h3>
+    <p>Тёплый Бангкок, храмы, рынки, уличная еда и яркая энергия города.</p>
+    <ul>
+      <li>Храмы и дворцы</li>
+      <li>Уличная еда</li>
+      <li>Вечерние рынки</li>
+    </ul>
+    <button>Подробнее</button>
+  </article>
+
+  <article class="tour-card bali" onclick="openModal('Bali Spirit')">
+    <span>Бали • 8 дней</span>
+    <h3>Bali Spirit</h3>
+    <p>Островной маршрут через храмы, рисовые террасы, океан и мягкие закаты.</p>
+    <ul>
+      <li>Убуд</li>
+      <li>Рисовые террасы</li>
+      <li>Океан и закаты</li>
+    </ul>
+    <button>Подробнее</button>
+  </article>
+
+</div>
+</section>
+
+<section class="tours-cta">
+  <h2>Не знаете, с чего начать?</h2>
+  <p>Оставьте заявку, и мы поможем подобрать маршрут под вашу атмосферу.</p>
+  <a href="contacts.html">Связаться</a>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <span>✿ ЗАЯВКА НА ТУР ✿</span>
+    <h2 id="tourName"></h2>
+
+    <input placeholder="Имя">
+    <input placeholder="Email">
+
+    <button onclick="closeModal()">Отправить заявку</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div>
+    <h3>YŪGEN</h3>
+    <p>Гид по культуре Азии</p>
+    <p>© 2026</p>
+  </div>
+
+  <div>
+    <h4>Навигация</h4>
+    <a href="index.html">Главная</a>
+    <a href="tours.html">Направления</a>
+    <a href="index.html#about">О нас</a>
+    <a href="contacts.html">Контакты</a>
+  </div>
+
+  <div>
+    <h4>Направления</h4>
+    <a href="tours.html">Япония</a>
+    <a href="tours.html">Корея</a>
+    <a href="tours.html">Таиланд</a>
+    <a href="tours.html">Бали</a>
+  </div>
+
+  <div>
+    <h4>Следите за нами</h4>
+    <div class="socials">
+      <span>◎</span>
+      <span>✈</span>
+      <span>◌</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
